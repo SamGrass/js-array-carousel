@@ -18,4 +18,13 @@
         itemContainer.innerHTML += itemContent;
     }
 
+    // seleziono gli image-container nell'html
+    const imageContainer = document.getElementsByClassName("image-container");
+
+    let activeImage = 0;
+
+    // la prima immagine dorvà avere la classe active 
+    imageContainer[activeImage].classList.add("active");
+    console.log(imageContainer[0]);
+
     
