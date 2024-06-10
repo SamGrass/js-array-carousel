@@ -56,9 +56,9 @@ main {
 
 .btn-top {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
 }
 
 .btn-bottom {
