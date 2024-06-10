@@ -27,4 +27,48 @@
     imageContainer[activeImage].classList.add("active");
     console.log(imageContainer[0]);
 
+    // seleziono i bottoni
+    const next = document.getElementById("next");
+    const prev = document.getElementById("prev");
+
+    // far si che al click dei due bottoni la classe active si sposti tra i vari elementi
+
+    // click next 
+    next.addEventListener ("click",
+        function() {
+            if (activeImage < imageList.length - 1) {
+                // rimuovo la classe al vecchio valore
+                imageContainer[activeImage].classList.remove("active");
+
+                // deve aumentare il valore di active image
+                activeImage++;
+
+                // aggiungo la classe al nuovo valore
+                imageContainer[activeImage].classList.add("active");
+
+                console.log(activeImage);
+            }    
+        }
+    );
+    
+    // click prev
+    prev.addEventListener ("click",
+        function() {
+
+            if (activeImage > 0) {
+
+                // rimuovo la classe al vecchio valore
+                imageContainer[activeImage].classList.remove("active");
+
+                // deve aumentare il valore di active image
+                activeImage--;
+
+                // aggiungo la classe al nuovo valore
+                imageContainer[activeImage].classList.add("active");
+
+                console.log(activeImage);
+            } 
+            
+        }
+    );
     
