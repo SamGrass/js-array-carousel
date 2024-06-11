@@ -47,8 +47,16 @@
                 imageContainer[activeImage].classList.add("active");
 
                 console.log(activeImage);
-            }    
-        }
+            }   else {
+                imageContainer[activeImage].classList.remove("active");
+
+                // deve aumentare il valore di active image
+                activeImage = 0;
+
+                // aggiungo la classe al nuovo valore
+                imageContainer[activeImage].classList.add("active");
+            }
+        } 
     );
     
     // click prev
@@ -67,7 +75,15 @@
                 imageContainer[activeImage].classList.add("active");
 
                 console.log(activeImage);
-            } 
+            } else {
+                imageContainer[activeImage].classList.remove("active");
+
+                // deve aumentare il valore di active image
+                activeImage = imageList.length - 1;
+
+                // aggiungo la classe al nuovo valore
+                imageContainer[activeImage].classList.add("active");
+            }
             
         }
     );
